@@ -4,123 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beyond DevOps</title>
+  <!-- Add Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --text: #222;
-      --muted: #666;
+      --text: #202331;
+      --muted: #6b7385;
       --accent: #0057ff;
-      --bg: #ffffff;
+      --bg: #f7f9fc;
+      --container-bg: #fff;
+      --border-radius: 18px;
+      --shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
     }
     * {
       box-sizing: border-box;
     }
     body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background: var(--bg);
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #f7f9fc 0%, #e3eaff 100%);
       color: var(--text);
       margin: 0;
-      padding: 3rem 1.5rem;
-      line-height: 1.6;
+      min-height: 100vh;
+      padding: 0;
+    }
+    main {
+      background: var(--container-bg);
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 3rem auto 2rem auto;
+      padding: 2.8rem 1.7rem 2.2rem 1.7rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      position: relative;
     }
     header {
       margin-bottom: 2rem;
       text-align: center;
     }
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #0057ff 60%, #75baff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem auto;
+      box-shadow: 0 2px 8px rgba(0, 87, 255, 0.12);
+      font-size: 2.3rem;
+      color: #fff;
+    }
+    .logo::after {
+      content: "🚀";
+      display: block;
+    }
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.3rem;
-    }
-    p, li {
-      font-size: 1.05rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    blockquote {
-      border-left: 3px solid var(--accent);
-      padding-left: 1rem;
-      color: var(--muted);
-      font-style: italic;
-      margin: 1.5rem 0;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #eee;
-      margin: 2.5rem 0;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.3rem;
+      letter-spacing: -1px;
     }
     .tagline {
-      font-size: 1.2rem;
+      font-size: 1.22rem;
       font-weight: 600;
       color: var(--accent);
       margin-top: 1rem;
       text-align: center;
+      letter-spacing: 0.5px;
     }
-    .logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 16px;
-      background: #ddd;
-      display: inline-block;
-      margin-bottom: 1rem;
+    h2 {
+      margin-top: 2.2rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    p, li {
+      font-size: 1.08rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    blockquote {
+      border-left: 4px solid var(--accent);
+      padding-left: 1.2rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 2rem 0;
+      background: #f0f6ff;
+      border-radius: 8px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e1e6ef;
+      margin: 2.5rem 0;
+    }
+    li strong {
+      color: var(--accent);
+    }
+    /* Subtle hover on strong principles */
+    ul li strong:hover {
+      text-decoration: underline wavy var(--accent);
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1.2rem 0.5rem;
+      }
+      .logo {
+        width: 64px;
+        height: 64px;
+        font-size: 1.5rem;
+      }
+      h1 {
+        font-size: 1.45rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo"></div>
-    <h1>Beyond DevOps</h1>
-    <div class="tagline">Build better. Build together.</div>
-  </header>
+  <main>
+    <header>
+      <div class="logo"></div>
+      <h1>Beyond DevOps</h1>
+      <div class="tagline">Build better. Build together.</div>
+    </header>
 
-  <h2>A New Era of Software Is Emerging</h2>
-  <p>Software development has always evolved by widening the circle:</p>
-  <ul>
-    <li><strong>Waterfall</strong> — software as engineered infrastructure</li>
-    <li><strong>Agile</strong> — software as an evolving conversation</li>
-    <li><strong>DevOps</strong> — software as a living system in production</li>
-  </ul>
-  <p>But there's still a wall between those who build and those who use.</p>
-  <p><strong>That wall now comes down.</strong></p>
+    <h2>A New Era of Software Is Emerging</h2>
+    <p>Software development has always evolved by widening the circle:</p>
+    <ul>
+      <li><strong>Waterfall</strong> — software as engineered infrastructure</li>
+      <li><strong>Agile</strong> — software as an evolving conversation</li>
+      <li><strong>DevOps</strong> — software as a living system in production</li>
+    </ul>
+    <p>But there's still a wall between those who build and those who use.</p>
+    <p><strong>That wall now comes down.</strong></p>
 
-  <hr />
+    <hr />
 
-  <h2>Welcome to Beyond DevOps</h2>
-  <p>A new paradigm enabled by AI, LLMs, and community participation:</p>
-  <ul>
-    <li>Features are scaffolded in minutes, not weeks</li>
-    <li>Users contribute directly — via prompts, feedback, and workflows</li>
-    <li>AI accelerates iteration; developers guide and curate</li>
-    <li>Software becomes a living, participatory system</li>
-  </ul>
+    <h2>Welcome to Beyond DevOps</h2>
+    <p>A new paradigm enabled by AI, LLMs, and community participation:</p>
+    <ul>
+      <li>Features are scaffolded in minutes, not weeks</li>
+      <li>Users contribute directly — via prompts, feedback, and workflows</li>
+      <li>AI accelerates iteration; developers guide and curate</li>
+      <li>Software becomes a living, participatory system</li>
+    </ul>
 
-  <hr />
+    <hr />
 
-  <h2>Core Principles</h2>
-  <ul>
-    <li><strong>Co-Creation</strong> — software is built with the community</li>
-    <li><strong>Contextual Emergence</strong> — features arise from real usage, in real time</li>
-    <li><strong>Curation over Control</strong> — devs guide emergence, not dictate it</li>
-    <li><strong>Collective Ownership</strong> — software becomes shared infrastructure</li>
-    <li><strong>Always-On Feedback</strong> — AI + telemetry inform every step</li>
-  </ul>
+    <h2>Core Principles</h2>
+    <ul>
+      <li><strong>Co-Creation</strong> — software is built with the community</li>
+      <li><strong>Contextual Emergence</strong> — features arise from real usage, in real time</li>
+      <li><strong>Curation over Control</strong> — devs guide emergence, not dictate it</li>
+      <li><strong>Collective Ownership</strong> — software becomes shared infrastructure</li>
+      <li><strong>Always-On Feedback</strong> — AI + telemetry inform every step</li>
+    </ul>
 
-  <hr />
+    <hr />
 
-  <h2>It’s Not Just a Toolchain. It’s a Movement.</h2>
-  <blockquote>
-    From shipping code to cultivating ecosystems.  
-    From backlog grooming to real-time co-creation.  
-    From DevOps to <strong>Beyond DevOps</strong>.
-  </blockquote>
+    <h2>It’s Not Just a Toolchain. It’s a Movement.</h2>
+    <blockquote>
+      From shipping code to cultivating ecosystems.  
+      From backlog grooming to real-time co-creation.  
+      From DevOps to <strong>Beyond DevOps</strong>.
+    </blockquote>
 
-  <h2>Want to contribute?</h2>
-  <p>This is a living idea. Fork the repo, open a PR, or just start the conversation.</p>
+    <h2>Want to contribute?</h2>
+    <p>This is a living idea. Fork the repo, open a PR, or just start the conversation.</p>
+  </main>
 </body>
 </html>
