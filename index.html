@@ -28,6 +28,7 @@
       padding: 3rem 2rem;
       border-radius: var(--border-radius);
       box-shadow: var(--shadow);
+      position: relative;
     }
     header {
       text-align: center;
@@ -90,12 +91,17 @@
       <h2>A New Era of Software Is Emerging</h2>
       <p>Software development has always evolved by widening the circle:</p>
       <ul>
-        <li><strong>Waterfall</strong> — software as engineered infrastructure</li>
-        <li><strong>Agile</strong> — software as an evolving conversation</li>
-        <li><strong>DevOps</strong> — software as a living system in production</li>
+        <li>
+          <strong>Waterfall (1950s–1980s)</strong> — Teams wrote detailed specs upfront, then followed a strict sequence: design, develop, test, deploy. Users had no input until the very end. If something was wrong, it was too late to fix without restarting the whole process.
+        </li>
+        <li>
+          <strong>Agile (1990s–2020s)</strong> — Teams worked in short sprints, shipping small pieces of software quickly and often. User feedback entered the process earlier, and developers collaborated more closely — but scaling was messy, and rituals often became a burden.
+        </li>
+        <li>
+          <strong>DevOps (2010s–2020s)</strong> — Development and operations teams merged. Automation pipelines, cloud infrastructure, and monitoring became core. The goal was to deploy constantly and keep systems running smoothly. But tools proliferated, and user feedback was still indirect.
+        </li>
       </ul>
-      <p>But there's still a wall between those who build and those who use.</p>
-      <p><strong>That wall now comes down.</strong></p>
+      <p><strong>Now, we’re entering a fourth era — one that breaks down the wall between creators and users.</strong></p>
 
       <h2>Welcome to Beyond DevOps</h2>
       <ul>
@@ -127,12 +133,17 @@
       <h2>Une nouvelle ère du développement logiciel</h2>
       <p>Le développement logiciel a toujours évolué en élargissant le cercle :</p>
       <ul>
-        <li><strong>Waterfall</strong> — logiciel comme infrastructure planifiée</li>
-        <li><strong>Agile</strong> — logiciel comme conversation évolutive</li>
-        <li><strong>DevOps</strong> — logiciel comme système vivant en production</li>
+        <li>
+          <strong>Waterfall (années 1950–1980)</strong> — Les équipes rédigeaient des spécifications détaillées en amont, puis suivaient une séquence stricte : conception, développement, test, déploiement. Les utilisateurs n'intervenaient qu’à la toute fin. Si quelque chose n’allait pas, il fallait presque tout recommencer.
+        </li>
+        <li>
+          <strong>Agile (années 1990–2020)</strong> — Le travail se faisait par itérations courtes appelées sprints. Les équipes livraient rapidement des fonctionnalités, avec des retours utilisateurs plus tôt dans le processus. Mais à grande échelle, l’Agile devenait lourd, avec des rituels souvent vides de sens.
+        </li>
+        <li>
+          <strong>DevOps (années 2010–2020)</strong> — Développement et opérations ont fusionné. L’automatisation, l’infrastructure cloud et la surveillance continue sont devenues centrales. Le but était de déployer en continu tout en gardant la stabilité. Mais les outils se sont multipliés, et les utilisateurs restaient à distance.
+        </li>
       </ul>
-      <p>Mais un mur subsiste entre ceux qui construisent et ceux qui utilisent.</p>
-      <p><strong>Ce mur tombe aujourd’hui.</strong></p>
+      <p><strong>Nous entrons maintenant dans une quatrième ère — celle qui fait tomber le mur entre créateurs et utilisateurs.</strong></p>
 
       <h2>Bienvenue dans Beyond DevOps</h2>
       <ul>
@@ -162,10 +173,10 @@
 
   <script>
     function toggleLanguage() {
-      const frElements = document.querySelectorAll('.fr');
-      const enElements = document.querySelectorAll('.en');
-      frElements.forEach(el => el.classList.toggle('hidden'));
-      enElements.forEach(el => el.classList.toggle('hidden'));
+      const fr = document.querySelectorAll('.fr');
+      const en = document.querySelectorAll('.en');
+      fr.forEach(el => el.classList.toggle('hidden'));
+      en.forEach(el => el.classList.toggle('hidden'));
     }
   </script>
 </body>
