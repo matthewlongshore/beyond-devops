@@ -4,172 +4,169 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beyond DevOps</title>
-  <!-- Add Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --text: #202331;
-      --muted: #6b7385;
-      --accent: #0057ff;
-      --bg: #f7f9fc;
+      --text: #202020;
+      --muted: #555;
+      --accent: #111;
+      --bg: #f8f8f8;
       --container-bg: #fff;
       --border-radius: 18px;
-      --shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
-    }
-    * {
-      box-sizing: border-box;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
     }
     body {
-      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(135deg, #f7f9fc 0%, #e3eaff 100%);
-      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
       margin: 0;
-      min-height: 100vh;
-      padding: 0;
+      color: var(--text);
     }
     main {
-      background: var(--container-bg);
       max-width: 800px;
-      margin: 3rem auto 2rem auto;
-      padding: 2.8rem 1.7rem 2.2rem 1.7rem;
+      margin: 3rem auto;
+      background: var(--container-bg);
+      padding: 3rem 2rem;
       border-radius: var(--border-radius);
       box-shadow: var(--shadow);
-      position: relative;
     }
     header {
-      margin-bottom: 2rem;
       text-align: center;
-    }
-    .logo {
-      width: 90px;
-      height: 90px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #0057ff 60%, #75baff 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1rem auto;
-      box-shadow: 0 2px 8px rgba(0, 87, 255, 0.12);
-      font-size: 2.3rem;
-      color: #fff;
-    }
-    .logo::after {
-      content: "🚀";
-      display: block;
+      margin-bottom: 2rem;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       font-weight: 800;
-      margin-bottom: 0.3rem;
-      letter-spacing: -1px;
     }
     .tagline {
-      font-size: 1.22rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--accent);
-      margin-top: 1rem;
-      text-align: center;
-      letter-spacing: 0.5px;
+      margin-top: 0.5rem;
     }
     h2 {
-      margin-top: 2.2rem;
-      font-size: 1.35rem;
-      font-weight: 700;
+      font-size: 1.3rem;
       color: var(--accent);
-    }
-    p, li {
-      font-size: 1.08rem;
+      margin-top: 2.2rem;
     }
     ul {
       padding-left: 1.2rem;
-      margin-bottom: 1.2rem;
     }
     blockquote {
       border-left: 4px solid var(--accent);
-      padding-left: 1.2rem;
-      color: var(--muted);
+      padding-left: 1rem;
       font-style: italic;
-      margin: 2rem 0;
-      background: #f0f6ff;
+      color: var(--muted);
+      background: #f2f2f2;
       border-radius: 8px;
+      margin: 1.5rem 0;
     }
-    hr {
-      border: none;
-      border-top: 1px solid #e1e6ef;
-      margin: 2.5rem 0;
-    }
-    li strong {
-      color: var(--accent);
-    }
-    /* Subtle hover on strong principles */
-    ul li strong:hover {
-      text-decoration: underline wavy var(--accent);
+    .lang-toggle {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 0.9rem;
       cursor: pointer;
+      color: var(--accent);
+      border: none;
+      background: none;
+      font-weight: 600;
     }
-    @media (max-width: 600px) {
-      main {
-        padding: 1.2rem 0.5rem;
-      }
-      .logo {
-        width: 64px;
-        height: 64px;
-        font-size: 1.5rem;
-      }
-      h1 {
-        font-size: 1.45rem;
-      }
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
+  <button class="lang-toggle" onclick="toggleLanguage()">FR / EN</button>
   <main>
     <header>
-      <div class="logo"></div>
       <h1>Beyond DevOps</h1>
-      <div class="tagline">Build better. Build together.</div>
+      <div class="tagline en">Build better. Build together.</div>
+      <div class="tagline fr hidden">Construisez mieux. Construisez ensemble.</div>
     </header>
 
-    <h2>A New Era of Software Is Emerging</h2>
-    <p>Software development has always evolved by widening the circle:</p>
-    <ul>
-      <li><strong>Waterfall</strong> — software as engineered infrastructure</li>
-      <li><strong>Agile</strong> — software as an evolving conversation</li>
-      <li><strong>DevOps</strong> — software as a living system in production</li>
-    </ul>
-    <p>But there's still a wall between those who build and those who use.</p>
-    <p><strong>That wall now comes down.</strong></p>
+    <!-- ENGLISH -->
+    <section class="en">
+      <h2>A New Era of Software Is Emerging</h2>
+      <p>Software development has always evolved by widening the circle:</p>
+      <ul>
+        <li><strong>Waterfall</strong> — software as engineered infrastructure</li>
+        <li><strong>Agile</strong> — software as an evolving conversation</li>
+        <li><strong>DevOps</strong> — software as a living system in production</li>
+      </ul>
+      <p>But there's still a wall between those who build and those who use.</p>
+      <p><strong>That wall now comes down.</strong></p>
 
-    <hr />
+      <h2>Welcome to Beyond DevOps</h2>
+      <ul>
+        <li>Features are scaffolded in minutes, not weeks</li>
+        <li>Users contribute directly — via prompts, feedback, and workflows</li>
+        <li>AI accelerates iteration; developers guide and curate</li>
+        <li>Software becomes a living, participatory system</li>
+      </ul>
 
-    <h2>Welcome to Beyond DevOps</h2>
-    <p>A new paradigm enabled by AI, LLMs, and community participation:</p>
-    <ul>
-      <li>Features are scaffolded in minutes, not weeks</li>
-      <li>Users contribute directly — via prompts, feedback, and workflows</li>
-      <li>AI accelerates iteration; developers guide and curate</li>
-      <li>Software becomes a living, participatory system</li>
-    </ul>
+      <h2>Core Principles</h2>
+      <ul>
+        <li><strong>Co-Creation</strong> — software is built with the community</li>
+        <li><strong>Contextual Emergence</strong> — features arise from real usage, in real time</li>
+        <li><strong>Curation over Control</strong> — devs guide emergence, not dictate it</li>
+        <li><strong>Collective Ownership</strong> — software becomes shared infrastructure</li>
+        <li><strong>Always-On Feedback</strong> — AI + telemetry inform every step</li>
+      </ul>
 
-    <hr />
+      <h2>It’s Not Just a Toolchain. It’s a Movement.</h2>
+      <blockquote>
+        From shipping code to cultivating ecosystems.  
+        From backlog grooming to real-time co-creation.  
+        From DevOps to <strong>Beyond DevOps</strong>.
+      </blockquote>
+    </section>
 
-    <h2>Core Principles</h2>
-    <ul>
-      <li><strong>Co-Creation</strong> — software is built with the community</li>
-      <li><strong>Contextual Emergence</strong> — features arise from real usage, in real time</li>
-      <li><strong>Curation over Control</strong> — devs guide emergence, not dictate it</li>
-      <li><strong>Collective Ownership</strong> — software becomes shared infrastructure</li>
-      <li><strong>Always-On Feedback</strong> — AI + telemetry inform every step</li>
-    </ul>
+    <!-- FRENCH -->
+    <section class="fr hidden">
+      <h2>Une nouvelle ère du développement logiciel</h2>
+      <p>Le développement logiciel a toujours évolué en élargissant le cercle :</p>
+      <ul>
+        <li><strong>Waterfall</strong> — logiciel comme infrastructure planifiée</li>
+        <li><strong>Agile</strong> — logiciel comme conversation évolutive</li>
+        <li><strong>DevOps</strong> — logiciel comme système vivant en production</li>
+      </ul>
+      <p>Mais un mur subsiste entre ceux qui construisent et ceux qui utilisent.</p>
+      <p><strong>Ce mur tombe aujourd’hui.</strong></p>
 
-    <hr />
+      <h2>Bienvenue dans Beyond DevOps</h2>
+      <ul>
+        <li>Les fonctionnalités sont esquissées en minutes, pas en semaines</li>
+        <li>Les utilisateurs contribuent directement — via des prompts, du feedback, ou des flux de travail</li>
+        <li>L'IA accélère l'itération ; les développeurs guident et orchestrent</li>
+        <li>Le logiciel devient un système vivant et participatif</li>
+      </ul>
 
-    <h2>It’s Not Just a Toolchain. It’s a Movement.</h2>
-    <blockquote>
-      From shipping code to cultivating ecosystems.  
-      From backlog grooming to real-time co-creation.  
-      From DevOps to <strong>Beyond DevOps</strong>.
-    </blockquote>
+      <h2>Principes Fondateurs</h2>
+      <ul>
+        <li><strong>Co-création</strong> — le logiciel est conçu avec la communauté</li>
+        <li><strong>Émergence Contextuelle</strong> — les fonctionnalités naissent de l’usage réel</li>
+        <li><strong>Curatelle plutôt que Contrôle</strong> — les devs guident l’émergence</li>
+        <li><strong>Propriété Collective</strong> — le logiciel devient une infrastructure partagée</li>
+        <li><strong>Boucles de Retour Permanentes</strong> — l’IA + les données guident chaque étape</li>
+      </ul>
 
+      <h2>Ce n’est pas qu’une boîte à outils. C’est un mouvement.</h2>
+      <blockquote>
+        Passer de livrer du code à cultiver des écosystèmes.  
+        De la gestion de backlog à la co-création en temps réel.  
+        Du DevOps à <strong>Beyond DevOps</strong>.
+      </blockquote>
+    </section>
   </main>
+
+  <script>
+    function toggleLanguage() {
+      const frElements = document.querySelectorAll('.fr');
+      const enElements = document.querySelectorAll('.en');
+      frElements.forEach(el => el.classList.toggle('hidden'));
+      enElements.forEach(el => el.classList.toggle('hidden'));
+    }
+  </script>
 </body>
 </html>
